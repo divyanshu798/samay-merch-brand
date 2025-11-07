@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  color: #333;
+  background: #fff;
+}
+
+/* Myntra-style components */
+.myntra-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.myntra-nav-item {
+  color: #282c3f;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  transition: color 0.3s ease;
+}
+
+.myntra-nav-item:hover {
+  color: #ff3f6c;
+}
+
+.myntra-search {
+  background: #f5f5f6;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 40px 12px 16px;
+  font-size: 14px;
+  color: #282c3f;
+  width: 100%;
+  max-width: 500px;
+}
+
+.myntra-search::placeholder {
+  color: #94969f;
+}
+
+.myntra-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.myntra-product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.myntra-product-card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.myntra-product-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.myntra-product-card:hover .myntra-product-image {
+  transform: scale(1.05);
+}
+
+.myntra-price {
+  color: #282c3f;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.myntra-original-price {
+  color: #94969f;
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.myntra-discount {
+  color: #ff905a;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.myntra-rating {
+  background: #00796b;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.myntra-btn-primary {
+  background: #ff3f6c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.myntra-btn-primary:hover {
+  background: #e8365f;
+  transform: translateY(-1px);
+}
+
+.myntra-btn-secondary {
+  background: transparent;
+  color: #ff3f6c;
+  border: 1px solid #ff3f6c;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.myntra-btn-secondary:hover {
+  background: #ff3f6c;
+  color: white;
+}
+
+.myntra-filter-section {
+  background: white;
+  border-right: 1px solid #e5e5e5;
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+}
+
+.myntra-breadcrumb {
+  color: #94969f;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.myntra-breadcrumb a {
+  color: #94969f;
+  text-decoration: none;
+}
+
+.myntra-breadcrumb a:hover {
+  color: #ff3f6c;
+}
+
+.myntra-category-chip {
+  background: #f8f8f8;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #282c3f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 4px;
+  display: inline-block;
+}
+
+.myntra-category-chip.active,
+.myntra-category-chip:hover {
+  background: #ff3f6c;
+  color: white;
+  border-color: #ff3f6c;
+}
+
+.myntra-wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.myntra-wishlist-btn:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+.myntra-cart-sidebar {
+  background: white;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.myntra-footer {
+  background: #282c3f;
+  color: white;
+  padding: 40px 0 20px;
+}
+
+.myntra-footer h4 {
+  color: #ff3f6c;
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.myntra-footer a {
+  color: #94969f;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 2;
+  transition: color 0.3s ease;
+}
+
+.myntra-footer a:hover {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .myntra-nav-item {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  .myntra-product-image {
+    height: 240px;
+  }
+  
+  .myntra-search {
+    max-width: 100%;
+    margin: 8px 0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
